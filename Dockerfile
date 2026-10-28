@@ -1,22 +1,21 @@
-Imagen base ligera con Python y Debian
+# Imagen base ligera de Python en Linux
+FROM python:3.10-slim
 
-FROM python:3.10-slim-bullseye
+# Instalar SWI-Prolog en el sistema Linux del contenedor
+RUN apt-get update && apt-get install -y swi-prolog && rm -rf /var/lib/apt/lists/*
 
-Instalar SWI-Prolog y dependencias del sistema
-RUN apt-get update && apt-get install -y --no-install-recommends swi-prolog && rm -rf /var/lib/apt/lists/*
-
-Establecer directorio de trabajo
+# Establecer carpeta de trabajo
 WORKDIR /app
 
-Copiar archivo de requerimientos e instalarlos
+# Copiar requerimientos e instalar dependencias de Python
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-Copiar todo el código del proyecto al contenedor
+# Copiar todo el código del proyecto
 COPY . .
 
-Exponer el puerto donde corre la aplicación Flask
+# Exponer el puerto de Flask
 EXPOSE 5000
 
-Comando para iniciar el servidor web
+# Comando para ejecutar el servidor backend
 CMD ["python", "backend/app.py"]
