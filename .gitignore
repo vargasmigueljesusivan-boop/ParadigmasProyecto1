@@ -1,0 +1,22 @@
+Entornos virtuales
+venv/
+env/
+ENV/
+
+Archivos de Python y caché
+pycache/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+Archivos temporales de Prolog
+*.qlf
+*~
+
+Sistema operativo e IDEs
+.DS_Store
+.vscode/
+.idea/
+
+Entornos y secretos
+.env

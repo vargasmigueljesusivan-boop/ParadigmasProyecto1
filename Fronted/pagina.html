@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Experto - Recomendador de Laptops</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>💻 Asistente Inteligente de Selección de Cómputo</h1>
+            <p>Sistema Experto basado en Inferencia Lógica (Prolog)</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Ingresa tus necesidades</h2>
+            <form id="expert-form">
+                <div class="form-group">
+                    <label for="carrera">Carrera Universitaria:</label>
+                    <select id="carrera" required>
+                        <option value="">-- Selecciona una opción --</option>
+                        <option value="Sistemas Computacionales">Ing. en Sistemas Computacionales</option>
+                        <option value="Mecatrónica">Ing. en Mecatrónica</option>
+                        <option value="Biónica">Ing. en Biónica</option>
+                        <option value="Industrial">Ing. Industrial</option>
+                        <option value="Inteligencia Artificial">Ing. en Inteligencia Artificial</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="presupuesto">Presupuesto Máximo ($ MXN):</label>
+                    <input type="number" id="presupuesto" min="5000" step="500" placeholder="Ej. 18000" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Herramientas / Software que utilizarás:</label>
+                    <div class="checkbox-grid">
+                        <label><input type="checkbox" value="Docker"> Docker</label>
+                        <label><input type="checkbox" value="VirtualBox"> VirtualBox</label>
+                        <label><input type="checkbox" value="SolidWorks"> SolidWorks</label>
+                        <label><input type="checkbox" value="MATLAB"> MATLAB</label>
+                        <label><input type="checkbox" value="Proteus"> Proteus</label>
+                        <label><input type="checkbox" value="AutoCAD"> AutoCAD</label>
+                        <label><input type="checkbox" value="VS Code"> VS Code</label>
+                        <label><input type="checkbox" value="Dev C++"> Dev C++</label>
+                    </div>
+                </div>
+
+                <button type="submit" id="btn-submit">Consultar Motor Lógico</button>
+            </form>
+        </section>
+
+        <section class="card" id="results-section">
+            <h2>Resultados e Inferencias Obtendias</h2>
+            <div id="results-container">
+                <p class="placeholder-text">Llena el formulario y ejecuta la consulta para ver las recomendaciones del motor en Prolog.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Paradigmas de Programación - Escuela Superior de Cómputo (IPN)</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
