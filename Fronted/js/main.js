@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             // Petición HTTP POST al backend en Python
-            const response = await fetch('http://127.0.0.1:5000/api/recomendar', {
+            const response = await fetch('/api/recomendar', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
