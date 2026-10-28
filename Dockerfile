@@ -18,4 +18,4 @@ COPY . .
 EXPOSE 5000
 
 # Comando para ejecutar el servidor backend
-CMD ["python", "backend/app.py"]
+CMD ["python", "backend/main.py"]
