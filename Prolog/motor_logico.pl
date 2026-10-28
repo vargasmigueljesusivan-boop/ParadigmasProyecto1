@@ -21,7 +21,7 @@ laptop(l10, 'Acer', 'Extensa 15', 14000, 16, i5, no).
 laptop(l11, 'Acer', 'Nitro 5 (Basica)', 17500, 16, i5, si).
 
 % Hechos sobre Requerimientos de Herramientas (herramienta, min_ram, gpu_requerida)
-requiere_tool('Docker', 8, no).
+requiere_tool('Docker', 16, no).
 requiere_tool('VirtualBox', 8, no).
 requiere_tool('SolidWorks', 16, si).
 requiere_tool('MATLAB', 8, no).
