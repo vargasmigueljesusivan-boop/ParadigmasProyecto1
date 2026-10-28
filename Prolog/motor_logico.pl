@@ -16,10 +16,13 @@ laptop(l5, 'Lenovo', 'Legion Pro 5', 28000, 32, i7, si).
 laptop(l6, 'Acer', 'Aspire 5', 12500, 8, ryzen5, no).
 laptop(l7, 'Apple', 'MacBook Air M2', 23000, 8, m2, no).
 laptop(l8, 'Dell', 'G15', 22500, 16, i7, si).
+laptop(l9, 'HP', 'ProBook 445', 13500, 16, ryzen5, no).
+laptop(l10, 'Acer', 'Extensa 15', 14000, 16, i5, no).
+laptop(l11, 'Acer', 'Nitro 5 (Basica)', 17500, 16, i5, si).
 
 % Hechos sobre Requerimientos de Herramientas (herramienta, min_ram, gpu_requerida)
-requiere_tool('Docker', 16, no).
-requiere_tool('VirtualBox', 16, no).
+requiere_tool('Docker', 8, no).
+requiere_tool('VirtualBox', 8, no).
 requiere_tool('SolidWorks', 16, si).
 requiere_tool('MATLAB', 8, no).
 requiere_tool('Proteus', 8, no).
