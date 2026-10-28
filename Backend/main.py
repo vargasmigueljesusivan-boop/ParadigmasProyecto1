@@ -5,7 +5,8 @@ import shutil
 from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 
-app = Flask(__name__, static_folder='../Frontend', static_url_path='')
+# NOTA: Asegúrate de que 'Fronted' o 'Frontend' coincida exactamente con el nombre de tu carpeta en el proyecto
+app = Flask(__name__, static_folder='../Fronted', static_url_path='')
 CORS(app)
 
 # Ruta hacia el archivo Prolog
@@ -99,7 +100,3 @@ def recomendar():
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port, debug=True)
-
-#Detectar el ejecutable de SWI-Prolog en Windows
-
-ruta_swipl = shutil.which('swipl') or r"C:\Program Files\swipl\bin\swipl.exe"
